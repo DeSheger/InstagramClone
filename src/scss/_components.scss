@@ -1,0 +1,115 @@
+
+
+.intro{
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.logo__desc{
+    width: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search{
+    min-height: 50px;
+
+
+    display: flex;
+    width: 70%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        height: 30px;
+        width: 70%;
+        margin:0 3%;
+        padding:0 5px;
+        border: 1px black solid;
+        border-radius: 4px;
+    }
+
+    &__button {
+        height: 30px;
+
+        background-color: black;
+        color: white;
+        border: 1px black solid;
+        border-radius: 4px;
+    }
+}
+
+
+.menu {
+    height: 10vh;
+    min-height: 50px;
+
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+
+
+        &__list {
+        display: flex;
+        flex-basis:100%;
+        justify-content: space-around;
+        
+        }
+  
+        &__item {
+        display: inline;
+        }
+
+}
+
+    
+
+
+
+.banner {
+    height: 70vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 10%;
+
+    &__intro {
+        font-size: 300%;
+    }
+}
+
+.gallery {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__image {
+        width: 20%;
+        height: 50px;
+        background-color: black;
+    }
+
+}
+
+
+  
