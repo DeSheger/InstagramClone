@@ -1,0 +1,9 @@
+{
+    "post": {
+        "main":[
+            {"id":0,"picture":"https://cdn.pixabay.com/photo/2020/04/16/15/39/mountains-5051149_1280.jpg","desc":"Post 1"},
+            {"id":1,"picture":"https://cdn.pixabay.com/photo/2020/04/16/15/39/mountains-5051149_1280.jpg","desc":"Post 2"},
+            {"id":2,"picture":"https://cdn.pixabay.com/photo/2020/04/16/15/39/mountains-5051149_1280.jpg","desc":"Post 3"}
+        ]
+    }
+}
