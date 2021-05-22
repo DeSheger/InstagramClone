@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@
 .intro {
   width: 100%;
   height: 15vh;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,8 +19,14 @@
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  position: fixed;
   background-color: white;
+}
+
+@media (min-width: 800px) {
+  .intro {
+    width: 50%;
+    border-bottom: 1px solid #c7c7c7;
+  }
 }
 
 .intro .logo__desc {
@@ -32,6 +40,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: 'Lobster', cursive;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 800px) {
+  .intro .logo__desc {
+    font-size: 1.7rem;
+  }
 }
 
 .intro .search {
@@ -68,15 +84,15 @@
 }
 
 .menu {
-  height: 10vh;
+  height: 15vh;
+  width: 100vw;
   min-height: 50px;
+  bottom: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -ms-flex-pack: distribute;
@@ -85,6 +101,15 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
+}
+
+@media (min-width: 800px) {
+  .menu {
+    width: 50%;
+    bottom: auto;
+    left: 50%;
+    border-bottom: 1px solid #cacaca;
+  }
 }
 
 .menu__list {
@@ -124,15 +149,18 @@
 }
 
 .post {
-  width: 100%;
+  width: 100vw;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .post__close {
@@ -141,19 +169,37 @@
 }
 
 .post__close input {
+  width: 30px;
+  height: 30px;
   background-color: black;
   color: white;
   border: none;
-  width: 30px;
-  height: 100%;
 }
 
 .post__container {
   width: 100%;
   height: 100vh;
-  margin: 20px 0;
-  background-color: #949494;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  margin-bottom: 30px;
+  background-color: white;
   overflow: hidden;
+  border-bottom: 1px solid #c9c9c9;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 640px) {
+  .post__container {
+    width: 600px;
+    border: 1px solid #cac9c9;
+    border-radius: 3px;
+  }
 }
 
 .post__image {
@@ -165,15 +211,106 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 .post__image img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+}
+
+.post__date {
+  font-weight: bold;
+  padding-top: 16px;
+  padding-left: 16px;
 }
 
 .post__desc {
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 16px 16px;
+}
+
+.photo {
+  height: auto;
+  width: 50%;
+}
+
+.photo__image {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .photo__image {
+    border-radius: 10px;
+  }
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.message {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.explore {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.explore__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 15vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 800px) {
+  .explore__main {
+    padding: 20vh 0;
+  }
+}
+
+.explore__container {
+  height: auto;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 640px) {
+  .explore__container {
+    width: 60vw;
+  }
 }
 /*# sourceMappingURL=App.css.map */
