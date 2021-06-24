@@ -6,25 +6,21 @@ import Search from '../components/search';
 import Post from '../components/post';
 import post_info from '../sources/post_data/post';
 
-console.log(post_info.post.main.length)
-
-
 
 class Home extends React.Component {
 
+    //post_render generate Posts from data base in Home Component
     post_render = () => {
-      let p=[];
-
+      let posts_length=[];
 
       for(let i=0;i<post_info.post.main.length;i++) {
-        p.push(<Post name={i}/>);
+        posts_length.push(<Post name={i}/>);
       }
 
-      console.log(p);
-      return p;
+      return posts_length;
     };
 
-
+    //render Home
     render() {
       return <div className="home">
       
