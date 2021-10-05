@@ -1,4 +1,3 @@
-
 const post_info=require("./post_data.json");
 
 

@@ -288,18 +288,18 @@
 
 
 .home {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
 
 }
 
 .message {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
 }
 
 .explore {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     

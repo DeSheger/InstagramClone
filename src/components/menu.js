@@ -1,29 +1,11 @@
 import React from 'react';
 
+
 class Menu extends React.Component {
   
-    display_home=()=>{
-      document.querySelector(".home").style.display="flex";
-      document.querySelector(".message").style.display="none";
-      document.querySelector(".explore").style.display="none";
-    }
-    display_message=()=>{
-      document.querySelector(".home").style.display="none";
-      document.querySelector(".message").style.display="flex";
-      document.querySelector(".explore").style.display="none";
-
-      
-      
-    }
-    display_explore=()=>{
-      document.querySelector(".home").style.display="none";
-      document.querySelector(".message").style.display="none";
-      document.querySelector(".explore").style.display="flex";
-
-     
-    }
-    display_favourite=()=>{
-      
+    menuHandler = (e, name) => {
+      e.preventDefault();
+      this.props.active(name)
     }
 
 
@@ -31,11 +13,10 @@ class Menu extends React.Component {
     render(){ 
       return <nav className="menu" style={this.props.style}>
         <ul className="menu__list">
-          <li className="menu__item"><p className="menu__link" onClick={this.display_home} href="">Home</p></li>
-          <li className="menu__item"><p className="menu__link" onClick={this.display_message} href="">Message</p></li>
-          <li className="menu__item"><p className="menu__link" onClick={this.display_explore} >Explore</p></li>
-          <li className="menu__item"><a className="menu__link" onClick="" href="*">Favourite</a></li>
-          <li className="menu__item"><a className="menu__link" onClick="" href="*">Profile</a></li>
+          <li className="menu__item"><p className="menu__link" onClick={(e)=>this.menuHandler(e,"home")} href="">Home</p></li>
+          <li className="menu__item"><p className="menu__link" onClick={(e)=>this.menuHandler(e,"explore")} href="">Explore</p></li>
+          <li className="menu__item"><p className="menu__link" onClick={(e)=>this.menuHandler(e,"favourite")} href="">Favourite</p></li>
+          <li className="menu__item"><p className="menu__link" onClick={(e)=>this.menuHandler(e,"profile")} href="">Profile</p></li>
         </ul>
       </nav>
     }

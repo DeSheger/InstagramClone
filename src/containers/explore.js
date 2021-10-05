@@ -5,10 +5,9 @@ import Photo from '../components/photo';
 import post_info from '../sources/post_data/post';
 
 const style = {
-      left:0,
-      width:'100%'
+  left: 0,
+  width: '100%'
 }
-
 
 class Explore extends React.Component {
 
@@ -16,14 +15,14 @@ class Explore extends React.Component {
   post_render = () => {
 
     const posts_length = [];
-    const container_name="explore__container";
+    const container_name = "explore__container";
 
     //second loop count number of Photos in Containers
-    const loop_for_posts=(used_containers)=>{
+    const loop_for_posts = (used_containers) => {
       const photos = [];
 
-      for(let i = used_containers * 4 ;i < (used_containers+1) * 4 && i < post_info.post.main.length ; i++){
-        photos.push(<Photo name={i}/>)
+      for (let i = used_containers * 4; i < (used_containers + 1) * 4 && i < post_info.post.main.length; i++) {
+        photos.push(<Photo name={i} />)
       }
 
       //return ARRAY with Photos, which in next step will be placed in Container
@@ -33,8 +32,8 @@ class Explore extends React.Component {
 
     //loop FOR count number of Containers
     //function loop_for_posts() count number of Photos inside each Container
-    for (let containers = 0; containers <= ( Math.floor(post_info.post.main.length / 4 ) ); containers++) {
-      posts_length.push(<div className={ container_name }>
+    for (let containers = 0; containers <= (Math.floor(post_info.post.main.length / 4)); containers++) {
+      posts_length.push(<div className={container_name}>
         {loop_for_posts(containers)}
 
       </div>);
@@ -45,17 +44,17 @@ class Explore extends React.Component {
   };
 
   //render Explore
-    render() {
-      return <div className= "explore">
-        <Menu style={ style }/>
-        <div className= "explore__main">
+  render() {
+    const { active } = this.props
+    return <div className="explore">
+      <Menu style={style} active={active} />
+      <div className="explore__main">
 
-
-          { this.post_render() }
+        {this.post_render()}
 
       </div>
-      </div>
-    }
+    </div>
+  }
 }
 
 export default Explore;
