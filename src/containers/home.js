@@ -22,7 +22,7 @@ class Home extends React.Component {
 
   //render Home
   render() {
-    const { active } = this.props
+    const { active, user } = this.props
     return <div className="home">
 
       <div className="intro">
@@ -30,7 +30,7 @@ class Home extends React.Component {
       </div>
 
       <div className="banner">
-        <p className="banner__intro">Welcome in gallery! {activeUser}</p>
+        <p className="banner__intro">Welcome in gallery, {user.login}!</p>
       </div>
       <div className="post">
 

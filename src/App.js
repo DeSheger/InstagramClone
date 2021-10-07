@@ -4,14 +4,18 @@ import './css/App.css';
 import Start from './containers/start';
 import Home from './containers/home';
 import Explore from './containers/explore';
+import Profile from './containers/profile';
 
 class App extends React.Component {
 
   state = {
     start: true,
     home: false,
-    message: false,
     explore: false,
+    profile: false,
+
+
+    session: null
   }
 
   //containerActiveHandler toogles the states of containers
@@ -23,22 +27,29 @@ class App extends React.Component {
         })
       }
       else {
-        this.setState({
-          [stateItem]: false
-        })
+        if(stateItem!="session"){
+          this.setState({[stateItem]: false})
+        } 
       }
+      
     }
+  }
+
+  activeSession = (e,loggedUser) => {
+    e.preventDefault()
+    this.setState({ session: loggedUser });
   }
 
   render() {
 
-    const { start, home, explore } = this.state
-    
+    const { start, home, explore, session, profile } = this.state
+
     return (
       <div className="wrapper">
-        {start ? <Start active={this.containersActiveHandler} /> : null}
-        {home ? <Home active={this.containersActiveHandler}/> : null}
-        {explore ? <Explore active={this.containersActiveHandler}/> : null}
+        {start ? <Start active={this.containersActiveHandler} activeSession={this.activeSession} /> : null}
+        {home ? <Home active={this.containersActiveHandler} user={session}/> : null}
+        {explore ? <Explore active={this.containersActiveHandler} /> : null}
+        {profile ? <Profile active={this.containersActiveHandler} /> : null}
       </div>
     );
   }
