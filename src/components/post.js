@@ -1,7 +1,7 @@
 import React from 'react';
 
 import post_info from '../sources/post_data/post';
-
+import Photo from './photo';
 
 class Post extends React.Component {
         
@@ -61,7 +61,7 @@ class Post extends React.Component {
         post.style.position="static";
         post.style.top="auto";
         post.style.left="auto";
-        post.style.height="100vh";
+        post.style.height="auto";
         post.style.witdh="100%";
         post.style.overflow="hidden";
         intro.style.display="flex";
@@ -79,8 +79,8 @@ class Post extends React.Component {
           <input type="button" value="x" onClick={this.post_hidden}/>
         </div>
 
-        <div className="post__image" >
-          <img className="post__img" onClick={this.post_show} src={post_info.post.main[this.props.name].picture} alt="fail to load"></img>
+        <div className="post__image" onClick={this.post_show}>
+          <Photo name={this.props.name}/>
         </div>
         <p className="post__date">{post_info.post.main[this.props.name].date}</p>
         <p className="post__desc" >{post_info.post.main[this.props.name].desc}</p>

@@ -22,7 +22,7 @@ class Explore extends React.Component {
       const photos = [];
 
       for (let i = used_containers * 4; i < (used_containers + 1) * 4 && i < post_info.post.main.length; i++) {
-        photos.push(<Photo name={i} />)
+        photos.push(<div className="explore__post"><Photo name={i} /></div>)
       }
 
       //return ARRAY with Photos, which in next step will be placed in Container

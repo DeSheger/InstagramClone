@@ -49,7 +49,7 @@ class App extends React.Component {
         {start ? <Start active={this.containersActiveHandler} activeSession={this.activeSession} /> : null}
         {home ? <Home active={this.containersActiveHandler} user={session}/> : null}
         {explore ? <Explore active={this.containersActiveHandler} /> : null}
-        {profile ? <Profile active={this.containersActiveHandler} /> : null}
+        {profile ? <Profile active={this.containersActiveHandler} user={session}/> : null}
       </div>
     );
   }

@@ -1,9 +1,9 @@
 {
     "user": {
         "main":[
-            {"id":0,"login":"piotr","password":"test"},
-            {"id":1,"login":"rafal","password":"test"},
-            {"id":2,"login":"andrzej","password":"test"}
+            {"id":0,"login":"piotr","password":"test","image":"https://cdn.pixabay.com/photo/2020/05/17/20/21/cat-5183427_960_720.jpg","desc":"Hello I m Piotr!","posts":[0,1,2]},
+            {"id":1,"login":"rafal","password":"test","image":"https://cdn.pixabay.com/photo/2020/05/17/20/21/cat-5183427_960_720.jpg","desc":"Hello I m Rafal!","posts":[3,4,5]},
+            {"id":2,"login":"andrzej","password":"test","image":"https://cdn.pixabay.com/photo/2020/05/17/20/21/cat-5183427_960_720.jpg","desc":"Hello I m Andrzej","posts":[]}
         ]
     }
 }
