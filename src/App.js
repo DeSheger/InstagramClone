@@ -4,6 +4,7 @@ import './css/App.css';
 import Start from './containers/start';
 import Home from './containers/home';
 import Explore from './containers/explore';
+import Favourite from './containers/favourite';
 import Profile from './containers/profile';
 
 class App extends React.Component {
@@ -12,6 +13,7 @@ class App extends React.Component {
     start: true,
     home: false,
     explore: false,
+    favourite: false,
     profile: false,
 
 
@@ -42,13 +44,14 @@ class App extends React.Component {
 
   render() {
 
-    const { start, home, explore, session, profile } = this.state
+    const { start, home, explore, favourite, session, profile } = this.state
 
     return (
       <div className="wrapper">
         {start ? <Start active={this.containersActiveHandler} activeSession={this.activeSession} /> : null}
         {home ? <Home active={this.containersActiveHandler} user={session}/> : null}
         {explore ? <Explore active={this.containersActiveHandler} /> : null}
+        {favourite ? <Favourite active={this.containersActiveHandler}/> : null}
         {profile ? <Profile active={this.containersActiveHandler} user={session}/> : null}
       </div>
     );

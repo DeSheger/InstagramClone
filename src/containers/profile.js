@@ -16,8 +16,10 @@ class Info extends React.Component{
                 <div className="profile__container">
                     <div className="profile__info">
                             <img src={user.image} className="profile__image" alt="error"/>
-                            <div className="profile__name"><h1 className="profile_text">{user.login}</h1></div>
-                            <p className="profile__desc">{user.desc}</p>
+                            <div className="profile__name-container">
+                                <div className="profile__name"><h1 className="profile__text">{user.login}</h1></div>
+                                <p className="profile__desc">{user.desc}</p>
+                            </div>
                     </div>
                     
                     <div className="profile__gallery">
