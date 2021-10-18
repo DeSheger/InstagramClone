@@ -332,6 +332,43 @@
     }
 }
 
+.favourite {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    &__main {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-bottom: 15vh;
+        justify-content: center;
+        @media (min-width:800px) {
+            padding: 20vh 0;
+        }
+    }
+
+    &__container {
+        height: auto;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        @media (min-width:640px) {
+            width: 60vw;
+        }
+    }
+
+    &__post {
+        display: flex;
+
+        height: auto;
+        width: 50%;
+    }
+
+}
+
 .profile {
     display: flex;
     flex-direction: column;
