@@ -2,15 +2,6 @@ import React from 'react';
 
 import Logo from './logo';
 import user_info from '../sources/users_data/users';
-import { AppBody } from '../App';
-
-//start session if isLoginCorrect is true
-let currentSession = "null"
-
-
-//checks if the login details are correct
-
-
 
 class Login extends React.Component {
     state = {
@@ -73,4 +64,4 @@ class Login extends React.Component {
     }
 }
 
-export { Login as default, currentSession };
+export { Login as default };

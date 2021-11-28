@@ -71,6 +71,8 @@ class Post extends React.Component {
         }
 
         post.style.marginbottom='30px';
+
+        post.scrollIntoView({behavior:"auto", block:'center'})
     }
   render() {
       return <div className="post__container" id={post_info.post.main[this.props.name].id}>
@@ -83,6 +85,7 @@ class Post extends React.Component {
           <Photo name={this.props.name}/>
         </div>
         <p className="post__date">{post_info.post.main[this.props.name].date}</p>
+        <p className="post__hashtag">{post_info.post.main[this.props.name].hashtag}</p>
         <p className="post__desc" >{post_info.post.main[this.props.name].desc}</p>
       </div>
     }

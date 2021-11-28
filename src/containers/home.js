@@ -6,7 +6,7 @@ import Search from '../components/search';
 import Post from '../components/post';
 import post_info from '../sources/post_data/post';
 
-import { activeUser } from '../sources/current_session/current';
+
 class Home extends React.Component {
 
   //post_render generate Posts from data base in Home Component
