@@ -9,6 +9,12 @@ const style = {
   }
 
 class Info extends React.Component{
+    logoutHandler = (e) => {
+        e.preventDefault();
+        document.cookie = "user"+ "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        document.location.reload();
+    }
+
     render(){
         const {user} = this.props
         return (
@@ -19,9 +25,10 @@ class Info extends React.Component{
                             <div className="profile__name-container">
                                 <div className="profile__name"><h1 className="profile__text">{user.login}</h1></div>
                                 <p className="profile__desc">{user.desc}</p>
-                            </div>
+                            </div> 
+                            
                     </div>
-                    
+                        <button className="profile__logout" onClick={this.logoutHandler}>Log Out</button>
                     <div className="profile__gallery">
                         {user.posts.map((val)=><div className="profile__post"><Photo name={val}/></div>)}
                     </div>

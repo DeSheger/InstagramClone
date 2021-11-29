@@ -3,7 +3,6 @@ import React from "react";
 import Menu from "../components/menu";
 import Photo from "../components/photo";
 
-import user_info from "../sources/users_data/users";
 
 const style = {
     left: 0,
@@ -22,7 +21,7 @@ class Favourite extends React.Component {
 
     render() {
         const { active, user } = this.props
-        console.log(user)
+        
         return (
             <div className="favourite">
                 <Menu style={style} active={active} />
@@ -30,7 +29,7 @@ class Favourite extends React.Component {
                 <div className="favourite__main">
                     <div className="favourite__container">
                         <div className="favourite__gallery">
-                            {this.galleryHandler(user_info.user.main[user.id].favourite)}
+                            {this.galleryHandler(user.favourite)}
                         </div>
                     </div>
                 </div>

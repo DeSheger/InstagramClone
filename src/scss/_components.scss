@@ -396,6 +396,7 @@
 
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         
 
         @media (min-width:640px) {
@@ -449,6 +450,13 @@
         justify-content: center;
     }
 
+    /////////////////////////
+    &__logout {
+        height: auto;
+        padding: 5px;
+        width: auto;
+        
+    }
     /////////////////////////
 
     &__gallery {

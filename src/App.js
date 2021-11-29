@@ -42,13 +42,19 @@ class App extends React.Component {
     this.setState({ session: loggedUser });
   }
 
+  cookieSession = (loggedUser) => {
+    this.setState({
+      session: loggedUser
+    })
+  }
+
   render() {
 
     const { start, home, explore, favourite, session, profile } = this.state
 
     return (
       <div className="wrapper">
-        {start ? <Start active={this.containersActiveHandler} activeSession={this.activeSession} /> : null}
+        {start ? <Start active={this.containersActiveHandler} activeSession={this.activeSession} cookieSession={this.cookieSession}/> : null}
         {home ? <Home active={this.containersActiveHandler} user={session}/> : null}
         {explore ? <Explore active={this.containersActiveHandler} /> : null}
         {favourite ? <Favourite active={this.containersActiveHandler} user={session}/> : null}

@@ -333,6 +333,7 @@
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 @media (min-width: 640px) {
   .profile__container {
@@ -373,6 +374,11 @@
   text-align: center;
   display: flex;
   justify-content: center;
+}
+.profile__logout {
+  height: auto;
+  padding: 5px;
+  width: auto;
 }
 .profile__gallery {
   height: auto;
