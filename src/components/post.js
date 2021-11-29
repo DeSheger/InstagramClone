@@ -66,6 +66,7 @@ class Post extends React.Component {
     post.style.overflow = "hidden";
     intro.style.display = "flex";
     banner.style.display = "flex";
+    
     for (let i = 0; i < post_all.length; i++) {
       post_all[i].style.display = "flex";
     }

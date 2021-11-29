@@ -19,7 +19,7 @@ class Search extends React.Component {
     if(this.state.searchValue !== '')
     posts.forEach((value, index) => {
       if (value.textContent.search(this.state.searchValue) !== -1) {
-        value.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        value.scrollIntoView({ behavior: 'smooth', block: 'center' })
       }
     });
   }
