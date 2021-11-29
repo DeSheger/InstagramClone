@@ -9,10 +9,15 @@ const style = {
     width: '100%'
 }
 
+const listStyle = {
+    flexBasis: '50%'
+  }
+
 class Favourite extends React.Component {
 
     galleryHandler = (favouritePosts) => {
         let posts = [];
+        console.log(favouritePosts)
         for (const post of favouritePosts) {
             posts.push(<div className="favourite__post"><Photo name={post} /></div>)
         }
@@ -24,13 +29,13 @@ class Favourite extends React.Component {
         
         return (
             <div className="favourite">
-                <Menu style={style} active={active} />
+                <Menu style={style} listStyle={window.matchMedia('(max-width: 640)').matches?listStyle:null} active={active} />
 
                 <div className="favourite__main">
                     <div className="favourite__container">
-                        <div className="favourite__gallery">
+                        
                             {this.galleryHandler(user.favourite)}
-                        </div>
+                        
                     </div>
                 </div>
             </div>

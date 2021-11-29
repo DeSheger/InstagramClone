@@ -8,6 +8,10 @@ const style = {
     width: '100%'
   }
 
+  const listStyle = {
+    flexBasis: '50%'
+  }
+
 class Info extends React.Component{
     logoutHandler = (e) => {
         e.preventDefault();
@@ -39,12 +43,13 @@ class Info extends React.Component{
 }
 
 class Profile extends React.Component {
-
+    
     render() {
+        console.log(window.matchMedia('(min-width: 640)').matches)   
         const {user} = this.props;
         return(
         <div className="profile">
-            <Menu active={this.props.active} style={style}/>
+            <Menu active={this.props.active} style={style} listStyle={window.matchMedia('(min-width: 640)').matches?listStyle:null}/>
             <Info user={user}/>
         </div>)
     }

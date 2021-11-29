@@ -9,6 +9,10 @@ const style = {
   width: '100%'
 }
 
+const listStyle = {
+  flexBasis: '50%'
+}
+
 class Explore extends React.Component {
 
   //post_render generate Photos from data base in Explore Component
@@ -47,7 +51,7 @@ class Explore extends React.Component {
   render() {
     const { active } = this.props
     return <div className="explore">
-      <Menu style={style} active={active} />
+      <Menu style={style} listStyle={window.matchMedia('(max-width: 640)').matches?listStyle:null} active={active} />
       <div className="explore__main">
 
         {this.post_render()}

@@ -67,7 +67,8 @@ class Login extends React.Component {
 
                 <input className="login__password" type="password"
                     placeholder="password" onChange={this.passwordHandler} value={this.state.password} />
-                <p>Login: piotr Password: test || Login: rafal Password: test</p>
+                <p className="login__info">Login: piotr Password: test</p>
+                <p className="login__info">Login: rafal Password: test</p>
                 <input className="login__button" type="submit"
                     value="log in" onClick={(event) => {
 
