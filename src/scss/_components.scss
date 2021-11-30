@@ -354,19 +354,21 @@
 
 
 .explore {
+
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    
+
     height: auto;
     min-height: 100vh;
     
     &__main {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         width: 100%;
         padding-bottom: 15vh;
-        justify-content: center;
+        align-items: center;
         @media (min-width:800px) {
             padding: 20vh 0;
         }
@@ -374,14 +376,17 @@
 
     &__container {
         height: auto;
-        width: 100vw;
+        width: 100%;
 
         display: flex;
         flex-wrap: wrap;
-        
-
         @media (min-width:640px) {
-            width: 60vw;
+            width: 600px;
+        }
+
+        @media (min-width:1080px) {
+            width: 970px;
+            padding: 0 20px;
         }
     }
 
@@ -391,6 +396,7 @@
         height: auto;
         width: 50%;
     }
+
 }
 
 .favourite {
@@ -405,9 +411,10 @@
     &__main {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         width: 100%;
         padding-bottom: 15vh;
-        justify-content: center;
+        align-items: center;
         @media (min-width:800px) {
             padding: 20vh 0;
         }
@@ -420,7 +427,12 @@
         display: flex;
         flex-wrap: wrap;
         @media (min-width:640px) {
-            width: 60vw;
+            width: 600px;
+        }
+
+        @media (min-width:1080px) {
+            width: 970px;
+            padding: 0 20px;
         }
     }
 
@@ -440,9 +452,10 @@
     &__main {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         width: 100%;
         padding-bottom: 15vh;
-        justify-content: center;
+        align-items: center;
         padding: 10vh 0;
         @media (min-width:800px) {
             padding: 20vh 0;
@@ -459,7 +472,12 @@
         
 
         @media (min-width:640px) {
-            width: 60vw;
+            width: 600px;
+        }
+
+        @media (min-width:1080px) {
+            width: 970px;
+            padding: 0 20px;
         }
     }
 
